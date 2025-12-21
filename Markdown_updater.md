@@ -19,7 +19,7 @@
     rows:
       - timestamp: Incoming Summer 2026
         description: |
-          Backend SWE Intern @ [TikTok](https://www.tiktok.com),
+          Backend Software Engineer Intern @ [TikTok](https://www.tiktok.com),
           where I'll be joining the Privacy & Security team.
       
       - timestamp: Incoming Spring 2026
