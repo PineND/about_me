@@ -1,0 +1,85 @@
+@font-face {
+    font-family: OptimaLTPro;
+    src: url(OptimaLTPro-Roman.otf);
+}
+
+
+/* hide scrollbars */
+html, body {
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none;
+}
+/* end hide scrollbars */
+
+:root {
+    --bg-color: #0F0F0F;
+    --text-color: white;
+    --link-color: #8ECAFE;
+    --link-hover-color: #C1E5FE;
+    --border-color: #242424;
+}
+
+.root {
+    max-width: 40rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    font-family: OptimaLTPro, Arial, sans-serif;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    text-align: left;
+    vertical-align: top;
+    padding: 0.5rem 1rem;
+}
+
+.table-timestamp {
+    width: 6.5rem;
+}
+
+.table-description {
+    width: auto;
+}
+
+.spacer {
+    height: 1.5rem;
+}
+
+.footer {
+    color: var(--border-color);
+    text-align: right;
+    font-size: 0.8rem;
+}
