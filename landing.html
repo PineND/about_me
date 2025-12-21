@@ -2,82 +2,66 @@
     <head>
         <title>Pine Nguyen</title>
         <link rel="stylesheet" href="styling.css">
+        <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
     </head>
     <body class="root">
-        <h1>Greetings!</h1>
-        <div class="introduction">
-            <p>
-                My name is Pine Nguyen. 
-                I'm a CS & DS undergrad at UC berkeley 
-                and am interested in backend systems and infrastructure. 
-                I like to solve difficult problems with great people.
-            </p>
-            <p>
-                To see more of what I'm up to, you can check out my 
-                <a href="https://github.com/PineND" target="_blank">GitHub</a> or 
-                <a href="https://www.linkedin.com/in/pine-ng" target="_blank">LinkedIn</a>. 
-                Say hi to me at pinenguyen [at] berkeley [dot] edu.
-            </p>
-            <p>Below are some of the things I’ve been up to.</p>
-        </div>
-        <table>
-            <tr>
-                <th class="table-timestamp">Currently</th>
-                <th class="table-description"></th>
-              </tr>
-              <tr>
-                <td class="table-timestamp">Incoming</td>
-                <td class="table-description">
-                    Backend SWE Intern @ <a href="https://www.tiktok.com" target="_blank">TikTok</a>,
-                    where I'll be joining the Safety & Security team to tackle age restriction problems.
-                </td>
-              </tr>
-              <tr>
-                <td class="table-timestamp">May 2025 - Present</td>
-                <td class="table-description">
-                    Leading a team of engineers to build the Catalog, Grades, and Enrollment page at
-                    <a href="https://beta.berkeleytime.com" target="_blank">Berkeleytime</a>.
-                </td>
-              </tr>
-              <tr>
-                <td class="table-timestamp">August 2023 - Present</td>
-                <td class="table-description">
-                    Undergraduate at the University of California, Berkeley, 
-                    pursuing a double major in Computer Science and Data Science 
-                    with a domain emphasis in Economics.
-                </td>
-              </tr>
-        </table>
-        <div class="spacer"></div>
-        <table>
-            <tr>
-                <th class="table-timestamp">Previously</th>
-                <th class="table-description"></th>
-              </tr>
-              <tr>
-                <td class="table-timestamp">June 2025 - August 2025</td>
-                <td class="table-description">
-                    Software Engineer Intern @ <a href="https://www.gf.com" target="_blank">GlobalFoundries</a>.
-                    Built the semiconductor tapeout validation platform, and the anti-tampering infrastructure.
-                </td>
-              </tr>
-              <tr>
-                <td class="table-timestamp">January 2023 - May 2025</td>
-                <td class="table-description">
-                    Software Engineer @ <a href="https://beta.berkeleytime.com" target="_blank">Berkeleytime</a>.
-                    Built the crowd-sourced data system, and the semantic search engine.
-                </td>
-              </tr>
-              <tr>
-                <td class="table-timestamp">May 2024 - August 2024</td>
-                <td class="table-description">
-                    Software Engineer Intern @ <a href="https://stacklessdata.com" target="_blank">Stackless</a>.
-                    Worked on the data orchestration platform migration from Prefect to Dagster.
-                </td>
-              </tr>
-        </table>
-        <div class="footer">
-            <p>Last updated: 2025-11-27</p>
-        </div>
+        <div id="content"></div>
+        <div id="footer" class="footer"></div>
+        <script>
+            function parseLinks(text) {
+                return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+            }
+
+            function render(data) {
+                const container = document.getElementById('content');
+                let html = '';
+
+                for (let i = 0; i < data.length; i++) {
+                    const block = data[i];
+                    const isLast = i === data.length - 1;
+                    if (block.title) {
+                        html += `<h1>${block.title}</h1>`;
+                    } else if (block.text) {
+                        const content = parseLinks(block.text.trim().replace(/\n/g, ' '));
+                        html += `<p>${content}</p>`;
+                    } else if (block.table) {
+                        html += `<table>
+                            <tr>
+                                <th class="table-timestamp">${block.table.header}</th>
+                                <th class="table-description"></th>
+                            </tr>`;
+                        for (const row of block.table.rows) {
+                            const desc = parseLinks(row.description.trim().replace(/\n/g, ' '));
+                            html += `<tr>
+                                <td class="table-timestamp">${row.timestamp}</td>
+                                <td class="table-description">${desc}</td>
+                            </tr>`;
+                        }
+                        html += `</table>`;
+                        if (!isLast) html += `<div class="spacer"></div>`;
+                    }
+                }
+
+                container.innerHTML = html;
+            }
+
+            fetch('Markdown_updater.md')
+                .then(res => res.text())
+                .then(text => {
+                    const data = jsyaml.load(text);
+                    render(data);
+                });
+
+            fetch('https://api.github.com/repos/PineND/about_me/commits?per_page=1')
+                .then(res => res.json())
+                .then(commits => {
+                    if (commits && commits[0]) {
+                        const date = new Date(commits[0].commit.author.date);
+                        const formatted = date.toISOString().split('T')[0];
+                        document.getElementById('footer').innerHTML = `<p>Last updated: ${formatted}</p>`;
+                    }
+                })
+                .catch(() => {});
+        </script>
     </body>
 </html>

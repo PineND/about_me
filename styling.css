@@ -57,6 +57,20 @@ a:hover {
 table {
     border-collapse: collapse;
     width: 100%;
+    position: relative;
+    background:
+
+        linear-gradient(var(--text-color), var(--text-color)) 0 0 / 10px 1px no-repeat,
+        linear-gradient(var(--text-color), var(--text-color)) 0 0 / 1px 10px no-repeat,
+
+        linear-gradient(var(--text-color), var(--text-color)) 100% 0 / 10px 1px no-repeat,
+        linear-gradient(var(--text-color), var(--text-color)) 100% 0 / 1px 10px no-repeat,
+
+        linear-gradient(var(--text-color), var(--text-color)) 0 100% / 10px 1px no-repeat,
+        linear-gradient(var(--text-color), var(--text-color)) 0 100% / 1px 10px no-repeat,
+
+        linear-gradient(var(--text-color), var(--text-color)) 100% 100% / 10px 1px no-repeat,
+        linear-gradient(var(--text-color), var(--text-color)) 100% 100% / 1px 10px no-repeat;
 }
 
 th, td {
