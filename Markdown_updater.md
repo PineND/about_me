@@ -24,9 +24,8 @@
       
       - timestamp: Incoming Spring 2026
         description: |
-          Software Engineer Intern @ [Primer](https://www.primer.com) 
-          where I'll help fix education in the U.S. 
-          Backed by Founders Fund, Kolsha Venctures, Sam Altman, etc. !
+          Software Engineer Intern @ [Primer](https://www.primer.com), working on their education OS to make world-class education accessible to every child. 
+          Backed by Founders Fund, Khosla Ventures, Sam Altman, etc.
           
 
       - timestamp: May 2025 - Present
