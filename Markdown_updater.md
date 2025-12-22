@@ -52,8 +52,3 @@
         description: |
           Software Engineer @ [Berkeleytime](https://beta.berkeleytime.com).
           Built the crowd-sourced data system, and the semantic search engine.
-
-      - timestamp: May 2024 - August 2024
-        description: |
-          Software Engineer Intern @ [Stackless](https://stacklessdata.com).
-          Worked on the data orchestration platform migration from Prefect to Dagster.
