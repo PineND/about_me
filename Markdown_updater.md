@@ -1,7 +1,7 @@
-- title: Hi, xin chào!
+- title: Greetings!
 
 - text: |
-    My name is Pine Nguyen.
+    My name is Pine.
     I'm a CS & DS undergrad at UC berkeley
     and my interests are in backend systems and infrastructure.
     I like to solve difficult problems with great people.
@@ -17,7 +17,7 @@
 - table:
     header: Currently
     rows:
-      - timestamp: Incoming Summer 2026
+      - timestamp: Incoming Summer 2026s
         description: |
           Backend Software Engineer Intern @ [TikTok](https://www.tiktok.com),
           where I'll be joining the Privacy & Security team.
