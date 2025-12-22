@@ -17,7 +17,7 @@
 - table:
     header: Currently
     rows:
-      - timestamp: Incoming Summer 2026s
+      - timestamp: Incoming Summer 2026
         description: |
           Backend Software Engineer Intern @ [TikTok](https://www.tiktok.com),
           where I'll be joining the Privacy & Security team.
