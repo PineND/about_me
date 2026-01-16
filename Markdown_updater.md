@@ -17,14 +17,9 @@
 - table:
     header: Currently
     rows:
-      - timestamp: Incoming Summer 2026
+      - timestamp: Jan 2026 - Present
         description: |
-          Backend Software Engineer Intern @ [TikTok](https://www.tiktok.com),
-          where I'll be joining the Privacy & Security team.
-      
-      - timestamp: Incoming Spring 2026
-        description: |
-          Software Engineer Intern @ [Primer](https://www.primer.com), working on their education OS to make world-class education accessible to every child. 
+          Software Engineer Intern @ [Primer](https://www.primer.com), working on their education OS. 
           Backed by Founders Fund, Khosla Ventures, Sam Altman, etc.
           
 
