@@ -6,7 +6,7 @@
     },
     {
       "type": "text",
-      "content": "My name is Pine.\nI'm a CS & DS undergrad at UC berkeley\nand my interests are in backend systems and infrastructure.\nI like to solve difficult problems with great people."
+      "content": "My name is Pine. I'm a CS undergrad at UC berkeley and my interests are in backend systems and infrastructure. I like to solve difficult problems with great people."
     },
     {
       "type": "text",
@@ -44,7 +44,7 @@
         },
         {
           "timestamp": "June 2025 - August 2025",
-          "description": "Software Engineer Intern @ [GlobalFoundries](https://www.gf.com).\nBuilt the semiconductor tapeout validation platform, and the anti-tampering infrastructure."
+          "description": "Software Engineer Intern @ [GlobalFoundries](https://www.gf.com). Built the semiconductor tapeout validation platform, and the anti-tampering infrastructure."
         }
       ]
     }
