@@ -21,28 +21,21 @@
         description: |
           Software Engineer Intern @ [Primer](https://www.primer.com), working on their education OS. 
           Backed by Founders Fund, Khosla Ventures, Sam Altman, etc.
-          
-
       - timestamp: May 2025 - Present
         description: |
-          Leading a team of engineers to build the Catalog, Grades, and Enrollment page at
-          [Berkeleytime](https://berkeleytime.com).
-
-      - timestamp: August 2023 - Present
+          Head of engineering at [Berkeleytime](https://berkeleytime.com).
+      - timestamp: August 2023 - May 2026
         description: |
-          Undergraduate at the University of California - Berkeley,
-          pursuing a double major in Computer Science and Data Science
-          with a domain emphasis in Economics.
+          Undergraduate at the University of California - Berkeley, Computer Science major.
 
 - table:
     header: Previously
     rows:
+	    - timestamp: January 2023 - May 2025
+        description: |
+	      Led a team of engineers to build the Catalog, Grades, and Enrollment page at [Berkeleytime](https://berkeleytime.com).
+        Before that, I built the crowd-sourced data system, and contributed to the semantic search engine.
       - timestamp: June 2025 - August 2025
         description: |
           Software Engineer Intern @ [GlobalFoundries](https://www.gf.com).
           Built the semiconductor tapeout validation platform, and the anti-tampering infrastructure.
-
-      - timestamp: January 2023 - May 2025
-        description: |
-          Software Engineer @ [Berkeleytime](https://beta.berkeleytime.com).
-          Built the crowd-sourced data system, and the semantic search engine.
